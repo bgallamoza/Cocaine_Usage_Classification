@@ -1,7 +1,6 @@
 import pickle, gzip
 import json
 import pandas as pd
-from collections import OrderedDict
 
 __col_info = None
 __model = None
@@ -12,7 +11,7 @@ def set_col_info(file):
     global __col_info
 
     with open("./artifacts/" + file, 'rb') as f:
-        __col_info = json.load(f, object_pairs_hook=OrderedDict)
+        __col_info = json.load(f)
 
     print("Data columns successfully loaded")
 
@@ -20,9 +19,14 @@ def get_col_info():
     return __col_info
 
 def get_data_columns():
+    """Extracts the value from the 'data_columns' key in __col_info"""
+    
     return get_col_info()['data_columns']
 
 def set_model(file):
+    """Model is loaded from a gzip file, which is then unpickled and used
+    to initialize __model"""
+
     print("Loading model...")
     global __model
 
@@ -49,7 +53,7 @@ def get_pipeline():
     return __pipeline
 
 def make_prediction(model, pipeline, test_matrix):
-    """Takes a model, pipieline, and test_matrix. Test matrix is
+    """Takes a model, pipeline, and test_matrix. Test matrix is
     transformed by the pipeline and fed into the model. A yes/no string
     is returned according to the prediction"""
     

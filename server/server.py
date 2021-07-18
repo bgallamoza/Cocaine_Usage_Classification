@@ -9,6 +9,10 @@ def get_column_info():
 
 @app.route('/predict_crkcoc_usage', methods=['GET', 'POST'])
 def predict_crkcoc_usage():
+    """Request information is transferred into a 2D array, which is then preprocessed by an
+    initialized pipeline. Pipeline output is fed into the model, where a prediction result is
+    finally sent into a json as a response"""
+
     answers = []
     for col in utils.get_data_columns():
         answers.append(int(request.form[col]))

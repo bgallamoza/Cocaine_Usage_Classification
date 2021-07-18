@@ -3,7 +3,7 @@ library(data.table)
 library(dplyr)
 
 # Set your working directory in the datasets directory, for example:
-# setwd("C:/PYTHON/PROJECTS/Alcohol_Consumption_ML/datasets")
+# setwd("C:/PYTHON/PROJECTS/crkcoc_usage_ml/datasets")
 
 # Vector of each dataset year, which is converted to strings
 datasets <- as.character(2015:2019)
