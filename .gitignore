@@ -1,0 +1,6 @@
+.RHistory
+datasets/*.RData
+datasets/NSDUH_2015-2019.csv
+datasets/name_codes[1-3].txt
+model/
+pickle/
