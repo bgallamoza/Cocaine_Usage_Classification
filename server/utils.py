@@ -20,7 +20,7 @@ def get_col_info():
 
 def get_data_columns():
     """Extracts the value from the 'data_columns' key in __col_info"""
-    
+
     return get_col_info()['data_columns']
 
 def set_model(file):
@@ -60,6 +60,7 @@ def make_prediction(model, pipeline, test_matrix):
     test_matrix = pd.DataFrame(test_matrix, columns=get_data_columns())
     test_matrix = pipeline.transform(test_matrix)
     prediction = model.predict(test_matrix)
+    
     if (prediction == 1):
         return "Yes"
     else:
