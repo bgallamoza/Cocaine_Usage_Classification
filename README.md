@@ -21,8 +21,12 @@ Three different models were tested during my process using the Sklearn library:
 
 Ultimately, the Random Forest Classifier was chosen for producing the most precise predictions for individuals who have used cocaine. To make this model more interactive, I set up a Flask server to request a prediction based on user information, where a prediction is returned as a response.
 
-## How to run
+## Running the Files
 
+### R Script and Jupyter Notebooks
+Text
+
+### Running the Flask Server
 In progress!
 
 ## Necessary libraries
