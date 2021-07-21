@@ -13,10 +13,10 @@
 <h2>Demographics</h2>
 <h3>Sex</h3>
     <div class="switch-field">
-        <input type="radio" id="irsex_1" name="uiIrsex" value="1"/>
-        <label for="irsex_1">Male</label>
         <input type="radio" id="irsex-0" name="uiIrsex" value="0" checked/>
         <label for="irsex-0">Female</label>
+        <input type="radio" id="irsex_1" name="uiIrsex" value="1"/>
+        <label for="irsex_1">Male</label>
     </div>
 <h3>Age Group</h3>
     <div class="switch-field">
@@ -33,7 +33,7 @@
     </div>
 <h3>Race/Ethnicity</h3>
     <div class="location">
-        <select id="newrace2" name="uiNewrace2">
+        <select class="location" id="newrace2" name="uiNewrace2">
             <option value="1">White</option>
             <option value="2">Black/African American</option>
             <option value="3">Native American/AK Native</option>
@@ -45,7 +45,7 @@
     </div>
 <h3>Highest Completed Education</h3>
     <div class="location">
-        <select id="ireduhighst2" name="uiIreduhighst2">
+        <select class="location" id="ireduhighst2" name="uiIreduhighst2">
             <option value="1">Fifth Grade or less</option>
             <option value="2">Sixth Grade</option>
             <option value="3">Seventh Grade</option>
@@ -73,10 +73,10 @@
         <label for="health-5">Poor</label>
     </div>
 <h3>Number of Hours Worked Last Week</h3>
-    <input class="area"  type="number" min="0" id="wrkdhrswk2" class="floatLabel" name="uiWrkdhrswk2" value="40">
+    <input class="area"  type="number" min="0" id="wrkdhrswk2" class="floatLabel" name="uiWrkdhrswk2" value="0">
 <h3>Respondent's Total Income</h3>
     <div class="location">
-        <select id="irpinc3" name="uiIrpinc3">
+        <select class="location" id="irpinc3" name="uiIrpinc3">
             <option value="1">Less than $10,000</option>
             <option value="2">$10,000 - $19,999</option>
             <option value="3">$20,000 - $29,999</option>
@@ -114,22 +114,21 @@
     </div>
 
 <h2>Use of Other Substances</h2>
-    <h3>Number of Days You Have Drank Alcohol in the Past Year</h3>
-        <input class="area"  type="number" min="0" max="365" id="iralcfy" class="floatLabel" name="uiIralcfy" value="40">
-    <h3>Number of Days You Have Used Marijuana in the Past Year</h3>
-        <input class="area"  type="number" min="0" max="365" id="irmjfy" class="floatLabel" name="uiIrmjfy" value="40">
-    <h3>Number of Days You Have Used Heroine in the Past Year</h3>
-        <input class="area"  type="number" min="0" max="365" id="irherfy" class="floatLabel" name="uiIrherfy" value="40">
-    <h3>Number of Days You Have Used Methamphetamine in the Past Year</h3>
-        <input class="area"  type="number" min="0" max="365" id="irmethmyfq" class="floatLabel" name="uiIrmethmyfq" value="40">
-    <h3>Number of Days You Have Smoked Cigarettes in the Past Month</h3>
-        <input class="area"  type="number" min="0" max="31" id="cig30use" class="floatLabel" name="uiCig30use" value="40">
+    <div>
+        <h3>Number of Days You Have Drank Alcohol in the Past Year</h3>
+            <input class="area"  type="number" min="0" max="365" id="iralcfy" class="floatLabel" name="uiIralcfy" value="0">
+        <h3>Number of Days You Have Used Marijuana in the Past Year</h3>
+            <input class="area"  type="number" min="0" max="365" id="irmjfy" class="floatLabel" name="uiIrmjfy" value="0">
+        <h3>Number of Days You Have Used Heroine in the Past Year</h3>
+            <input class="area"  type="number" min="0" max="365" id="irherfy" class="floatLabel" name="uiIrherfy" value="0">
+        <h3>Number of Days You Have Used Methamphetamine in the Past Year</h3>
+            <input class="area"  type="number" min="0" max="365" id="irmethamyfq" class="floatLabel" name="uiIrmethamyfq" value="0">
+        <h3>Number of Days You Have Smoked Cigarettes in the Past Month</h3>
+            <input class="area"  type="number" min="0" max="31" id="cig30use" class="floatLabel" name="uiCig30use" value="0">
+    </div>
 
-<!--Button for answer submission. If entries are valid, resulting string is added
-to the UIcoccrk_pred division. If invalid entries are sent, errors are appended to the UIerror
-division-->
-<button class="submit" onclick="on_clicked_coccrk_pred()" type="button">Predict!</button>
-<div id="uiCoccrk_pred" class="result"><h2></h2> </div>
-<div id="uiError" class="result"><h2></h2> </div>
-</form>
+    <button class="submit" onclick="on_clicked_coccrk_pred()" type="button">Predict!</button>
+    <div id="uiCoccrk_pred" class="result"><h3></h3> </div>
+    <div id="uiError" class="result"><h3></h3> </div>
 </body>
+</html>
