@@ -19,10 +19,18 @@ def predict_crkcoc_usage():
     """Request information is transferred into a 2D array, which is then preprocessed by an
     initialized pipeline. Pipeline output is fed into the model, where a prediction result is
     finally sent into a json as a response"""
+    data_columns = utils.get_data_columns()
 
     answers = []
-    for col in utils.get_data_columns():
-        answers.append(int(request.form[col]))
+    for col in data_columns:
+        entry = request.form[col]
+        if (entry == "Error"):
+            response = jsonify({
+                'crkcoc_pred': str(data_columns.index(col))
+            })
+            return response
+        else:
+            answers.append(int(entry))
     
     response = jsonify({
         'crkcoc_pred': utils.make_prediction(utils.get_model(), utils.get_pipeline(), [answers])
