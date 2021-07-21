@@ -31,7 +31,7 @@ def set_model(file):
     global __model
 
     with open("./artifacts/" + file, 'rb') as f:
-        with gzip.open("model/randforest_model_optimized.pickle", 'rb') as f:
+        with gzip.open("./artifacts/" + file, 'rb') as f:
             p = pickle.Unpickler(f)
             __model = p.load()
 
@@ -56,7 +56,7 @@ def make_prediction(model, pipeline, test_matrix):
     """Takes a model, pipeline, and test_matrix. Test matrix is
     transformed by the pipeline and fed into the model. A yes/no string
     is returned according to the prediction"""
-    
+    print(test_matrix)
     test_matrix = pd.DataFrame(test_matrix, columns=get_data_columns())
     test_matrix = pipeline.transform(test_matrix)
     prediction = model.predict(test_matrix)

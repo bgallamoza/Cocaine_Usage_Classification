@@ -1,7 +1,14 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import utils
 
 app = Flask(__name__)
+CORS(app)
+cors = CORS(app, resources={
+    r"/*": {
+        "origins":"*"
+    }
+})
 
 @app.route('/get_column_info', methods=['GET'])
 def get_column_info():
