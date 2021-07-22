@@ -18,7 +18,7 @@ For this project, I used Anaconda version 2021.05, which should come with all ne
 
 The National Survey on Drug Use and Health (NSDUH) is the "leading source of statistical information on the use of illicit drugs, alcohol, and tobacco and mental health issues in the United States" (SAMHSA). **The abundance of Yes/No questions regarding the usage of illicit drugs make this dataset valuable for binary classification problems.**
 
-Compared to substances such as alcohol and tobacco, crack/cocaine has a relatively smaller pool of individuals 12+ years old who have tried cocaine before (~2 million). **The smaller number of people who have used cocaine may indicate that a more specific subset of people try cocaine.** This would make crack/cocaine a strong candidate for a binary classification problem. Exploratory data analysis was conducted to find identifiable characteristics in people who have tried crack/cocaine. Fourteen features were ultimately used to train the model, which include:
+Compared to substances such as alcohol and tobacco, crack/cocaine has a relatively smaller pool of individuals 12+ years old who have tried cocaine before (~2 million). **The smaller number of people who have used cocaine may indicate that a more specific subset of people try cocaine.** This would make crack/cocaine a strong candidate for a binary classification problem. Exploratory data analysis was conducted to find identifiable characteristics in people who have tried crack/cocaine. Fourteen features were used to train the model, which include:
 
 1. Highest completed education
 2. Number of days consumed alcohol in the past year
@@ -28,10 +28,12 @@ Compared to substances such as alcohol and tobacco, crack/cocaine has a relative
 
 ![alt text](/readme_pictures/EDA_plots.png "EDA Graphs")
 
+Ultimately, **this model will be useful to those who want to make educated guesses about another individual's potential cocaine use based on limited information.** This can be especially helpful to social workers seeking to help others who may be using crack/cocaine.
+
 ## **Choosing a model**
 Three different supervised classifiers were trained and tested: random forest classifier, logisitc regression classifier, and linear support vector machine classifier. For each model, different hyperparameters were tuned using GridSearchCV.
 
-**Ultimately, the Random Forest Classifier was chosen for producing the most precise predictions for individuals who have used cocaine.**
+**Ultimately, the Random Forest Classifier was chosen for producing the most precise predictions for individuals who have used cocaine.** Considering our potential use case for our model, we want to avoid falsely accusing others of crack/cocaine use, so precision is prioritized over recall.
 
 ## **Running the Files**
 To make this model more interactive, I set up a Flask server to request a prediction based on user information, where a prediction is returned as a response. If you just want to access the model, simply follow "Running the Flask Server."
