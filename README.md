@@ -18,13 +18,15 @@ For this project, I used Anaconda version 2021.05, which should come with all ne
 
 The National Survey on Drug Use and Health (NSDUH) is the "leading source of statistical information on the use of illicit drugs, alcohol, and tobacco and mental health issues in the United States" (SAMHSA). **The abundance of Yes/No questions regarding the usage of illicit drugs make this dataset valuable for binary classification problems.**
 
-Compared to substances such as alcohol and tobacco, crack/cocaine has a relatively smaller pool of individuals 12+ years old who have tried cocaine before (~2 million). **The smaller number of people who have used cocaine may indicate that a more specific subset of people try cocaine.** This would make crack/cocaine a strong candidate for a binary classification problem. Exploratory data analysis was conducted to find identifiable characteristics in people who have tried crack/cocaine. Explored features include (but are not limited to):
+Compared to substances such as alcohol and tobacco, crack/cocaine has a relatively smaller pool of individuals 12+ years old who have tried cocaine before (~2 million). **The smaller number of people who have used cocaine may indicate that a more specific subset of people try cocaine.** This would make crack/cocaine a strong candidate for a binary classification problem. Exploratory data analysis was conducted to find identifiable characteristics in people who have tried crack/cocaine. Fourteen features were ultimately used to train the model, which include:
 
 1. Highest completed education
 2. Number of days consumed alcohol in the past year
 3. Race/Ethnicity
 
-...and many others!
+...and several others!
+
+
 
 ## **Models Tested**
 Three different models were tested during my process using the Sklearn library:
@@ -45,13 +47,17 @@ Anaconda should be installed, containing all the necessary libraries to run the 
 https://www.anaconda.com/products/individual
 
 ### Running the Flask Server
-Again, Anaconda should have the necessary libraries to run the Flask server. Additionally, you will need the flask-cors library, which you can download by typing the following into your terminal:
+Anaconda should have the necessary libraries to run the Flask server. Additionally, you will need the flask-cors library for the server scripts, which you can download through Anaconda by typing the following into your terminal:
 
 ```conda install -c conda-forge flask-cors```
 
 Next, run the Flask server by navigating to the ```server``` directory and running ```python server.py```
 
-Now, you can open ```app.html``` in the ```client``` folder and enter your information for a prediction. Have fun!
+![alt text](/readme_pictures/flask.png "Starting the Flask server in Git Bash")
+
+Now, you can open ```app.html``` in the ```client``` folder and enter your information for a prediction. 
+
+Have fun!
 
 ## References
 
