@@ -26,15 +26,15 @@ Compared to substances such as alcohol and tobacco, crack/cocaine has a relative
 
 ...and several others!
 
+![alt text](/readme_pictures/EDA_plots.png "EDA Graphs")
 
+## **Choosing a model**
+Three different supervised classifiers were trained and tested: random forest classifier, logisitc regression classifier, and linear support vector machine classifier. For each model, different hyperparameters were tuned using GridSearchCV.
 
-## **Models Tested**
-Three different models were tested during my process using the Sklearn library:
-
-Ultimately, the Random Forest Classifier was chosen for producing the most precise predictions for individuals who have used cocaine. To make this model more interactive, I set up a Flask server to request a prediction based on user information, where a prediction is returned as a response.
+**Ultimately, the Random Forest Classifier was chosen for producing the most precise predictions for individuals who have used cocaine.**
 
 ## **Running the Files**
-If you just want to access the model, simply follow "Running the Flask Server."
+To make this model more interactive, I set up a Flask server to request a prediction based on user information, where a prediction is returned as a response. If you just want to access the model, simply follow "Running the Flask Server."
 
 ### R Script
 R and Rstudio was used to read and concatenate RData files provided for years 2015-2019. To run the R script, download the RData files from 2015 to 2019, place them in a folder, and run the script with your directory set to that folder. You can find the datasets here:
@@ -42,6 +42,10 @@ R and Rstudio was used to read and concatenate RData files provided for years 20
 https://www.datafiles.samhsa.gov/dataset/national-survey-drug-use-and-health-2015-nsduh-2015-ds0001
 
 ### Jupyter Notebook
+There are two Jupyter Notebooks that should be read in this order:
+1. **Exploratory Data Analysis (EDA.ipynb)**: Process cleaning, exploring, and graphing the dataset
+2. **Model_Building.ipynb**: Process creating a pipeline for data preprocessing and model building
+
 Anaconda should be installed, containing all the necessary libraries to run the code cells in my Jupyter Notebooks. You can install Anaconda here:
 
 https://www.anaconda.com/products/individual
@@ -55,7 +59,9 @@ Next, run the Flask server by navigating to the ```server``` directory and runni
 
 ![alt text](/readme_pictures/flask.png "Starting the Flask server in Git Bash")
 
-Now, you can open ```app.html``` in the ```client``` folder and enter your information for a prediction. 
+Now, you can open ```app.html``` in the ```client``` folder and enter your information for a prediction.
+
+![alt text](/readme_pictures/website.png "Preview of the website, server/app.html")
 
 Have fun!
 
