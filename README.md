@@ -7,6 +7,13 @@ Hello! This repository documents my entire process obtaining, cleaning, and usin
 2. Logistic Regression
 3. svm.LinearSVC
 
+This process is laid out in two Jupyter Notebooks:
+
+1. **Exploratory Data Analysis (EDA.ipynb)**: Process cleaning, exploring, and graphing the dataset
+2. **Model_Building.ipynb**: Process creating a pipeline for data preprocessing and model building
+
+To make my model more interactive, I also made a simple web application with Flask and a user interface built in HTML, JavaScript, and CSS. This allows users to obtain a prediction given their inputted data.
+
 ## **Libraries Used**
 For this project, I used Anaconda version 2021.05, which should come with all necessary libararies used throughout the project. Notable libraries used include:
 1. Sklearn
@@ -35,27 +42,28 @@ Three different supervised classifiers were trained and tested: random forest cl
 
 **Ultimately, the Random Forest Classifier was chosen for producing the most precise predictions for individuals who have used cocaine.** Considering our potential use case for our model, we want to avoid falsely accusing others of crack/cocaine use, so precision is prioritized over recall.
 
-## **Running the Files**
-To make this model more interactive, I set up a Flask server to request a prediction based on user information, where a prediction is returned as a response. If you just want to access the model, simply follow "Running the Flask Server."
+## **Running the Notebooks and Server**
 
-### R Script
-R and Rstudio was used to read and concatenate RData files provided for years 2015-2019. To run the R script, download the RData files from 2015 to 2019, place them in a folder, and run the script with your directory set to that folder. You can find the datasets here:
+Using the R script and running the Notebooks are optional. If you only want to run the server, please skip to "Running the Flask Server".
+
+### **Getting the NSDUH Data through R**
+R and Rstudio were used to read and concatenate RData files provided for years 2015-2019. To run the R script, download the RData files from 2015 to 2019, place them in the ```datasets``` folder, and run the script. You can find the datasets here:
 
 https://www.datafiles.samhsa.gov/dataset/national-survey-drug-use-and-health-2015-nsduh-2015-ds0001
 
-### Jupyter Notebook
-There are two Jupyter Notebooks that should be read in this order:
-1. **Exploratory Data Analysis (EDA.ipynb)**: Process cleaning, exploring, and graphing the dataset
-2. **Model_Building.ipynb**: Process creating a pipeline for data preprocessing and model building
+### **Running the Flask Server**
 
-Anaconda should be installed, containing all the necessary libraries to run the code cells in my Jupyter Notebooks. You can install Anaconda here:
+To run the Jupyter Notebook cells and start the Flask server, I included a ```requirements.txt``` file to install all the necessary Python libraries. You can install these by navigating to your terminal and running:
 
-https://www.anaconda.com/products/individual
+```pip install -r requirements.txt```
 
-### Running the Flask Server
-Anaconda should have the necessary libraries to run the Flask server. Additionally, you will need the flask-cors library for the server scripts, which you can download through Anaconda by typing the following into your terminal:
+Alternatively, if you have Anaconda installed, I included the environment I used to create this project, which can be installed in the terminal using:
 
-```conda install -c conda-forge flask-cors```
+```conda env create -f cocaine_usage_ml.yml```
+
+and activated using:
+
+```conda activate cocaine_usage_ml```
 
 Next, run the Flask server by navigating to the ```server``` directory and running ```python server.py```
 
