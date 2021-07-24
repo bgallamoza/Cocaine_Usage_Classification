@@ -51,6 +51,10 @@ R and Rstudio were used to read and concatenate RData files provided for years 2
 
 https://www.datafiles.samhsa.gov/dataset/national-survey-drug-use-and-health-2015-nsduh-2015-ds0001
 
+Alternatively, you can download the entire CSV on **Kaggle**, place it in ```datasets```, then run the Jupyter Notebooks:
+
+https://www.kaggle.com/bgallamoza/national-survey-of-drug-use-and-health-20152019
+
 ### **Running the Flask Server**
 
 To run the Jupyter Notebook cells and start the Flask server, I included a ```requirements.txt``` file to install all the necessary Python libraries. You can install these by navigating to your terminal and running:
