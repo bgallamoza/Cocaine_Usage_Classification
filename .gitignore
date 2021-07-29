@@ -4,3 +4,4 @@ datasets/NSDUH_2015-2019.csv
 datasets/NSDUH_2015-2019.zip
 model/
 pickle/
+__pycache__

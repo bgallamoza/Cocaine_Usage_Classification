@@ -72,6 +72,6 @@ if __name__ == "__main__":
     set_pipeline('pipeline.pickle')
     set_model('randforest_model.pickle')
 
-    test_answers=[[123, 3, 5, 10, 2, 1, 50, 20, 1, 2, 0, 5, 1, 1]]
+    test_answers=[[123, 3, 5, 10, 2, 1, 50, 20, 1, 2, 0, 5, 1]]
 
     print(make_prediction(get_model(), get_pipeline(), test_answers))

@@ -116,10 +116,6 @@ function get_irmethamyfq() {
     }
 }
 
-function get_newrace2() {
-    return document.getElementById("newrace2").value;
-}
-
 function get_irsex() {
     var uiIrsex = document.getElementsByName("uiIrsex")
     for (var i in uiIrsex) {
@@ -196,7 +192,6 @@ function on_clicked_coccrk_pred() {
         cig30use: get_cig30use(),
         irherfy: get_irherfy(),
         irmethamyfq: get_irmethamyfq(),
-        newrace2: get_newrace2(),
         irsex: get_irsex()
     }, function(data, status) {
         console.log(data.crkcoc_pred);

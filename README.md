@@ -29,13 +29,13 @@ Compared to substances such as alcohol and tobacco, crack/cocaine has a relative
 
 1. Highest completed education
 2. Number of days consumed alcohol in the past year
-3. Race/Ethnicity
+3. Number of hours worked in the past week
 
 ...and several others!
 
 ![alt text](/readme_pictures/EDA_plots.png "EDA Graphs")
 
-Ultimately, **this model will be useful to those who want to make educated guesses about another individual's potential cocaine use based on limited information.** This can be especially helpful to social workers seeking to help others who may be using crack/cocaine.
+Ultimately, **this model will be useful to those who want to make educated guesses about another individual's potential cocaine use based on limited information.** There are many potential applications for this model, such as evaluating loan applications based on an applicant's demographic/drug data. This model can also help social workers identify individuals who may be using crack/cocaine based on limited information, which is important for treating/preventing drug addiction.
 
 ## **Choosing a model**
 Three different supervised classifiers were trained and tested: random forest classifier, logisitc regression classifier, and linear support vector machine classifier. For each model, different hyperparameters were tuned using GridSearchCV.
