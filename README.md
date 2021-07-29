@@ -9,8 +9,11 @@ Hello! This repository documents my entire process obtaining, cleaning, and usin
 
 This process is laid out in two Jupyter Notebooks:
 
-1. **Exploratory Data Analysis (EDA.ipynb)**: Process cleaning, exploring, and graphing the dataset
-2. **Model_Building.ipynb**: Process creating a pipeline for data preprocessing and model building
+### **Exploratory Data Analysis (EDA.ipynb)**
+    Data preprocessing; includes all cleaning, exploring, and graphing in the dataset
+
+### **Model_Building.ipynb**
+    Pipeline and model building process, including hyperparameter testing with GridSearchCV
 
 To make my model more interactive, I also made a simple web application with Flask and a user interface built in HTML, JavaScript, and CSS. This allows users to obtain a prediction given their inputted data.
 
