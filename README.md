@@ -41,7 +41,7 @@ Compared to substances such as alcohol and tobacco, crack/cocaine has a relative
 Ultimately, **this model will be useful to those who want to make educated guesses about another individual's potential cocaine use based on limited information.** There are many potential applications for this model, such as evaluating loan applications based on an applicant's demographic/drug data. This model can also help social workers identify individuals who may be using crack/cocaine based on limited information, which is important for treating/preventing drug addiction.
 
 ## **Choosing a model**
-Three different supervised classifiers were trained and tested: random forest classifier, logisitc regression classifier, and linear support vector machine classifier. For each model, different hyperparameters were tuned using GridSearchCV.
+Three different supervised classifiers were trained and tested: random forest classifier, logisitc regression classifier, and linear support vector machine classifier. For each model, different hyperparameters were tuned using GridSearchCV. After optimizing hyperparameters, **all three models scored between 89-90% accuracy, with the Random Forest Classifier scoring the highest.**
 
 **Ultimately, the Random Forest Classifier was chosen for producing the most precise predictions for individuals who have used cocaine.** Considering our potential use case for our model, we want to avoid falsely accusing others of crack/cocaine use, so precision is prioritized over recall.
 
